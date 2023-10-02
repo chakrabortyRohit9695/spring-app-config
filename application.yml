@@ -6,8 +6,8 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
-      # The &{EUREKA_SERVER_ADDRESS} is when env variable is present, if not then use the localhost url
+      defaultZone: ${SERVICE-REGISTRY:http://localhost:8761/eureka}
+      # The ${SERVICE-REGISTRY} is when env variable is present, if not then use the localhost url
 okta:
   oauth2:
     issuer: https://dev-37484179.okta.com/oauth2/default
